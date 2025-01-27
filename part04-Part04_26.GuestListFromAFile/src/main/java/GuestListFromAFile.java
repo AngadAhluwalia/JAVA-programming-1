@@ -1,4 +1,3 @@
-
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -12,8 +11,17 @@ public class GuestListFromAFile {
         String file = scanner.nextLine();
 
         ArrayList<String> list = new ArrayList<>();
-        // implement reading the file here.
-        System.out.println("");
+        try(Scanner scanner2=new Scanner(Paths.get(file))){
+            while(scanner2.hasNextLine()){
+                String row=scanner2.nextLine();
+                list.add(row);
+            }
+
+        }catch(Exception e){
+            System.out.println("error"+e);
+            return;
+
+        }
 
         System.out.println("Enter names, an empty line quits.");
         while (true) {

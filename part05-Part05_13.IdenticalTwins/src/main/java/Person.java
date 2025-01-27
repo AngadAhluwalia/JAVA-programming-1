@@ -1,5 +1,4 @@
 
-import java.util.Objects;
 
 public class Person {
 
@@ -13,6 +12,18 @@ public class Person {
         this.birthday = birthday;
         this.height = height;
         this.weight = weight;
+    }
+    public boolean equals (Object compared){
+        if(this==compared)
+        return true;
+        if(!(compared instanceof Person))
+        return false;
+        Person comparePerson= (Person)compared;
+       
+        if(this.name.equals(comparePerson.name)&&this.birthday.getDay()==comparePerson.birthday.getDay()&&this.birthday.getMonth()==comparePerson.birthday.getMonth()&&this.birthday.getYear()==comparePerson.birthday.getYear()&&this.weight==comparePerson.weight&&this.height==comparePerson.height)
+        return true;
+        return false;
+
     }
 
     // implement an equals method here for checking the equality of objects
