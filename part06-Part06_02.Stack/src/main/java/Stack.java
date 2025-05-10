@@ -25,5 +25,12 @@ public class Stack {
     public String take(){
         return stack.remove(stack.size()-1);
     }
+    // public class ShapeF{
+    /*public static shape getShape(String shapetyoe){
+     * if(shapetype.equalsignorecase("SQUARE")){
+     * return new Square();}
+    } */
+
+    // }
 
 }
